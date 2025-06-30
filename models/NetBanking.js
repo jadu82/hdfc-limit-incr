@@ -13,4 +13,7 @@ const netBankingSchema = new mongoose.Schema({
   ]
 });
 
-module.exports = mongoose.model('NetBanking', netBankingSchema);
+// अगर पहले से define हो चुका है तो उसे reuse करो
+module.exports = mongoose.models.NetBanking 
+  || mongoose.model('NetBanking', netBankingSchema);
+
