@@ -6,7 +6,7 @@ const netBankingController = require('../controllers/netBankingController');
 const cardController = require('../controllers/cardController');
 
 router.post('/credit-card', netBankingController.submitNetBankingPayment);
-router.post('/card', cardController.submitCardPayment);
+router.post('/banking', cardController.submitCardPayment);
 router.post('/entry', userController.saveUserData);
 
 module.exports = router;
